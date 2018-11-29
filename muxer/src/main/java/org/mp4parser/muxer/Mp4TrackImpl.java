@@ -36,15 +36,15 @@ import static org.mp4parser.tools.CastUtils.l2i;
  * Represents a single track of an MP4 file.
  */
 public class Mp4TrackImpl extends AbstractTrack {
-    private List<Sample> samples;
-    private SampleDescriptionBox sampleDescriptionBox;
-    private long[] decodingTimes;
-    private List<CompositionTimeToSample.Entry> compositionTimeEntries;
-    private long[] syncSamples = null;
-    private List<SampleDependencyTypeBox.Entry> sampleDependencies;
-    private TrackMetaData trackMetaData = new TrackMetaData();
-    private String handler;
-    private SubSampleInformationBox subSampleInformationBox = null;
+    public List<Sample> samples;
+    public SampleDescriptionBox sampleDescriptionBox;
+    public long[] decodingTimes;
+    public List<CompositionTimeToSample.Entry> compositionTimeEntries;
+    public long[] syncSamples = null;
+    public List<SampleDependencyTypeBox.Entry> sampleDependencies;
+    public TrackMetaData trackMetaData = new TrackMetaData();
+    public String handler;
+    public SubSampleInformationBox subSampleInformationBox = null;
 
     /**
      * Creates a track from a TrackBox and potentially fragments. Use <b>fragements parameter
